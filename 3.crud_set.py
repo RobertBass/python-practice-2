@@ -1,8 +1,8 @@
-# CONJUNTOS
+# SETS
 
 set_countries = {'ecu', 'col', 'mex', 'arg'}
 
-# VALIDATIONES
+# VALIDATIONS
 print('col' in set_countries)
 print('per' in set_countries)
 

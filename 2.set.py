@@ -1,4 +1,4 @@
-# CONJUNTOS
+# SETS
 
 set_countries = {'ecu', 'col', 'mex', 'arg', 'ecu'}
 print(set_countries)
