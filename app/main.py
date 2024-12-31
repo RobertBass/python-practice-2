@@ -1,11 +1,16 @@
-import mod
+import utils
+import charts
+import read_csv
 
-keys, values = mod.getPopulation()
-print(keys, values)
+def run():
+    data = read_csv.read_csv('./app/data.csv') 
+    country = input("Que pais quieres verificar? ")
+    res = utils.population_by_country(data, country)
 
-data = [{'country': key, 'population': value} for (key, value) in zip(keys, values)]
-print(data)
+    if len(res) > 0:
+        country =  res[0]
+        labels, values = utils.getPopulation(country)
+        charts.generate_bar_char(labels, values)
 
-country = input("Que pais quieres verificar? ")
-res = mod.population_by_country(data, country)
-print(res)
+if __name__ == "__main__":
+    run()
